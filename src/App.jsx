@@ -19,7 +19,8 @@ import {
 import { Email, LinkedIn, GitHub, AutoAwesome } from "@mui/icons-material";
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "https://smart-ai-email-reply-generator.onrender.com";
+
 
 function App() {
   const [emailContent, setEmailContent] = useState("");
