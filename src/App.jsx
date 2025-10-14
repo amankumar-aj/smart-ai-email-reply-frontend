@@ -375,7 +375,7 @@ function App() {
           </Tooltip>
           <Tooltip title="LinkedIn" arrow>
             <IconButton
-              href="https://www.linkedin.com/in/aman-kumar-jha"
+              href="https://www.linkedin.com/in/amankumar6174/"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
@@ -393,7 +393,7 @@ function App() {
           </Tooltip>
           <Tooltip title="GitHub" arrow>
             <IconButton
-              href="https://github.com/amankumarjha"
+              href="https://github.com/amankumar-aj"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
