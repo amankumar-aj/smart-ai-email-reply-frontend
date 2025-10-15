@@ -19,7 +19,8 @@ import {
 import { Email, LinkedIn, GitHub, AutoAwesome } from "@mui/icons-material";
 import axios from "axios";
 
-const API_BASE_URL = "https://smart-ai-email-reply-generator.onrender.com";
+ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 
 function App() {
