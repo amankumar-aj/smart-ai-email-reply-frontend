@@ -19,7 +19,7 @@ import {
 import { Email, LinkedIn, GitHub, AutoAwesome } from "@mui/icons-material";
 import axios from "axios";
 
- const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 
 
@@ -346,17 +346,7 @@ function App() {
           backdropFilter: "blur(8px)",
         }}
       >
-        <Typography
-          variant="body1"
-          sx={{
-            color: "#4a4a4a",
-            mb: 2,
-            fontWeight: 600,
-            fontFamily: "'Inter', sans-serif",
-          }}
-        >
-          © {new Date().getFullYear()} Aman Kumar Jha — All Rights Reserved
-        </Typography>
+
 
         <Box>
           <Tooltip title="Email" arrow>
@@ -408,7 +398,20 @@ function App() {
               }}
             >
               <GitHub />
+
             </IconButton>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "#4a4a4a",
+                mb: 2,
+                mt: 2,
+                fontWeight: 600,
+                fontFamily: "'Inter', sans-serif",
+              }}
+            >
+              © {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} amankumar_aj | All rights reserved.
+            </Typography>
           </Tooltip>
         </Box>
       </Box>
