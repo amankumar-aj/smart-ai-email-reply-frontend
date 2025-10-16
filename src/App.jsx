@@ -21,8 +21,6 @@ import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-
-
 function App() {
   const [emailContent, setEmailContent] = useState("");
   const [tone, setTone] = useState("");
@@ -58,7 +56,8 @@ function App() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        background: "linear-gradient(135deg, #f5f7fa 0%, #e9efff 100%)",
+      background: "linear-gradient(135deg, #f5f7fa 0%, #e9efff 100%)",
+        backgroundSize: "20px 20px",
         backgroundAttachment: "fixed",
       }}
     >
@@ -140,6 +139,9 @@ function App() {
               label="Original Email Content"
               value={emailContent}
               onChange={(e) => setEmailContent(e.target.value)}
+              inputProps={{
+                maxLength: null,
+              }}
               sx={{
                 mb: 3,
                 "& .MuiOutlinedInput-root": {
@@ -152,6 +154,15 @@ function App() {
                   "&.Mui-focused fieldset": {
                     borderColor: "#4e54c8",
                     borderWidth: 2,
+                  },
+                  "& textarea": {
+                    resize: "none", // Prevent manual resizing
+                    overflow: "auto",
+                    "&::-webkit-scrollbar": {
+                      display: "none",
+                    },
+                    "-ms-overflow-style": "none",
+                    "scrollbar-width": "none",
                   },
                 },
               }}
@@ -248,7 +259,10 @@ function App() {
                 multiline
                 rows={12}
                 variant="outlined"
-                inputProps={{ readOnly: true }}
+                inputProps={{ 
+                  readOnly: true,
+                  maxLength: null,
+                }}
                 sx={{
                   mb: 3,
                   "& .MuiOutlinedInput-root": {
@@ -261,6 +275,15 @@ function App() {
                     },
                     "&.Mui-focused fieldset": {
                       borderColor: "#4e54c8",
+                    },
+                    "& textarea": {
+                      resize: "none", // Prevent manual resizing
+                      overflow: "auto",
+                      "&::-webkit-scrollbar": {
+                        display: "none",
+                      },
+                      "-ms-overflow-style": "none",
+                      "scrollbar-width": "none",
                     },
                   },
                 }}
@@ -346,8 +369,6 @@ function App() {
           backdropFilter: "blur(8px)",
         }}
       >
-
-
         <Box>
           <Tooltip title="Email" arrow>
             <IconButton
@@ -398,21 +419,20 @@ function App() {
               }}
             >
               <GitHub />
-
             </IconButton>
-            <Typography
-              variant="body1"
-              sx={{
-                color: "#4a4a4a",
-                mb: 2,
-                mt: 2,
-                fontWeight: 600,
-                fontFamily: "'Inter', sans-serif",
-              }}
-            >
-              © {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} amankumar_aj | All rights reserved.
-            </Typography>
           </Tooltip>
+          <Typography
+            variant="body1"
+            sx={{
+              color: "#4a4a4a",
+              mb: 2,
+              mt: 2,
+              fontWeight: 600,
+              fontFamily: "'Inter', sans-serif",
+            }}
+          >
+            © {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} amankumar_aj | All rights reserved.
+          </Typography>
         </Box>
       </Box>
     </Box>
