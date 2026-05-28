@@ -15,6 +15,7 @@ The system consists of three main components:
 
 - 🌐 **Try the Web App:** https://smart-ai-email-reply-generator.netlify.app/
 - 📖 **Project Details:** https://github.com/amankumar-aj/smart-ai-email-reply-public-repo
+- **Project backend: **  https://github.com/amankumar-aj/smart-ai-email-reply-backend
 
 ---
 
